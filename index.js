@@ -23,7 +23,7 @@ app.post("/form", (req, res) => {
   const data = {
     from: `${req.fields.firstname} ${req.fields.lastname} <${req.fields.email}>`,
     to: "emilie.leury@gmail.com",
-    subject: "Formulaire JS",
+    subject: req.fields.subject,
     text: req.fields.message,
   };
 
